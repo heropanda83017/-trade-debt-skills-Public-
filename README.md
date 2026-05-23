@@ -1,13 +1,15 @@
 # trade-debt-skills
 
-金瀚债权保全催收与股权投资尽调智能体技能包。Hermes Agent 技能集，适用于武汉金融街集团贸易业务风险管控与资产重组场景。
+债权保全催收与股权投资尽调智能体技能包。Hermes Agent 技能集，适用于贸易业务风险管控与资产重组场景。
+
+核心模型：DeepSeek V4 Flash
 
 ## 技能清单
 
 ### 核心业务
 | 技能 | 说明 |
 |------|------|
-| **trade-debt-skill** | 金瀚公司债权催收专业知识体系：大宗贸易逾期账款催收策略、化债方案评估、法律程序跟进、股权投资尽调 |
+| **trade-debt-skill** | 债权催收专业知识体系：逾期账款催收策略、化债方案评估、法律程序跟进、股权投资尽调 |
 
 ### 信息采集
 | 技能 | 说明 |
@@ -32,7 +34,7 @@
 ### 分析工具
 | 技能 | 说明 |
 |------|------|
-| **maoxuan-skill** | 毛泽东战略分析框架：矛盾分析、持久战策略，适用于谈判策略设计、化债方案推演 |
+| **maoxuan-skill** | 战略分析框架：矛盾分析、持久战策略，适用于谈判策略设计、化债方案推演 |
 | **drawio-skill** | 流程图/架构图绘制：法律程序图、化债方案决策树 |
 
 ### 工具
@@ -59,23 +61,12 @@
   └─ ④ 其余 → 清理删除
 ```
 
-### 目录结构
-
-```
-E:\TradeDebt\
-├─ 01-策略/          催收策略方案（暂存层）
-├─ 02-脚本/          工具脚本
-├─ 源文件/           01-债务人档案 ~ 09-参考素材
-├─ wiki/             Obsidian知识库（entities/concepts/comparisons）
-└─ SOUL.md           角色配置文件
-```
-
 ### 环境变量
 
-从 `land-of-dream-planning` 角色同步的完整 key 集（22项），涵盖：
+需配置以下 key 以确保技能正常运行（22项）：
 - 大模型 API：DeepSeek、火山引擎
 - 数据采集：Cloudflare、Tavily、Firecrawl
-- 协作工具：Notion
+- 协作工具：Notion API
 - GitHub发布：Personal Access Token
 
 ## 安装
@@ -94,11 +85,7 @@ hermes hub install <skill-name>
 
 ## 维护
 
-技能从 `land-of-dream-planning` 角色迁移复用，核心技能版本与上游保持一致。定期通过 `workspace-audit` 技能进行自检：
-
-- wiki 链接完整性检查
-- 输出目录健康度审计
-- SOUL.md与实际目录对齐
+技能从 `land-of-dream-planning` 角色迁移复用，核心技能版本与上游保持一致。定期通过 `workspace-audit` 技能进行自检。
 
 ## 链接
 
